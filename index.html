@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+      <link rel="stylesheet" href="2_prj.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Trial Animation</title>
+</head>
+<body>
+           <span>
+
+           </span>
+       
+       <script>
+           const bdel= document.querySelector("body");
+          bdel.addEventListener("mousemove", (event)=>
+            {
+               const x= event.offsetX;
+               const y= event.offsetY;
+               console.log(x,y);
+               const e= document.createElement("span");
+               e.style.left = x + "px";
+               e.style.top =  y + "px";
+        bdel.appendChild(e);
+        const size= Math.random()*100;
+        e.style.width= size +"px";
+        e.style.height= size +"px";
+
+        setTimeout(()=>{
+            e.remove();
+        },3000);
+              
+            }
+          );
+
+
+       </script>
+</body>
+</html>
